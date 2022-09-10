@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Moebelmacher</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+        <div class="contact-overlay container">
+            <div class="contact-overlay-top">
+                <h2>Kontaktformular</h2>
+                <div class="contact-overlay-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            <div class="underline"></div>
+            <form class="contact-form">
+                <div>
+                    <input class="input-item" type="text" placeholder="Name">
+                    <input class="input-item" type="email" placeholder="Email">
+                </div>
+                <textarea class="input-item" placeholder="Message" rows="6"></textarea>
+                <input class="btn-contact-submit button-border button-full" type="submit" value="submit">
+            </form>
+        </div>
+        <div class="gallery-overlay">
+            <div class="gallery-container container">
+                <button id="gallery-btn-prev">
+                    <i class="ri-arrow-left-s-line"></i>
+                </button>
+                <div class="gallery-img-box">
+                    <img id="gallery-overlay-img" alt="img-1">
+                </div>
+                <button id="gallery-btn-next">
+                    <i class="ri-arrow-right-s-line"></i>
+                </button>
+            </div>
+        </div>
+        <header>
+            <div class="container" id="top-bar">
+                <div class="logo">
+                    <img src="./res/logo.svg" alt="Moebelmacher">
+                </div>
+                <div class="burger-nav">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+            <nav class="container">
+                <div class="nav-box">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html">Home</a>
+                            <div class="nav-border"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about">Über uns</a>
+                            <div class="nav-border"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#services">Leistungen</a>
+                            <div class="nav-border"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#gallery">Galerie</a>
+                            <div class="nav-border"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact">Kontakt</a>
+                            <div class="nav-border"></div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="slider container">
+                <div class="slider-overlay">
+                    <div class="slider-text">
+                        <h1><span class="inline">Blick</span><br><span class="inline">für's Detail</span></h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate, expedita nostrum obcaecati quae soluta sunt!</p>
+                        <div class="slider-btns">
+                            <button id="btn-slider-one" class="button-border">Mehr lesen</button>
+                            <button id="btn-slider-two" class="button-border button-full">Zur Galerie</button>
+                        </div>
+                    </div>
+                    <div class="slider-control">
+                        <span id="slide-num">01</span>
+                        <div class="dots">
+                            <button class="slider-dot active-dot"></button>
+                            <button class="slider-dot"></button>
+                            <button class="slider-dot"></button>
+                            <button class="slider-dot"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-track">
+                    <div class="single-slide">
+                        <img src="./res/img-1.jpg" alt="">
+                    </div>
+                    <div class="single-slide">
+                        <img src="./res/img-2.jpg" alt="">
+                    </div>
+                    <div class="single-slide">
+                        <img src="./res/img-3.jpg" alt="">
+                    </div>
+                    <div class="single-slide">
+                        <img src="./res/img-4.jpg" alt="">
+                    </div>
+                    <div class="single-slide" id="firstClone">
+                        <img src="./res/img-1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="bg">
+                <div class="bg-top"></div>
+                <div class="bg-top-2"></div>
+            </div>
+        </header>
+        <main>
+            <section class="about container" id="about">
+                <h2>Wir sind Moebelmacher</h2>
+                <div class="underline"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aliquid consectetur cupiditate dolorum enim error illo itaque necessitatibus nesciunt, odio quam quod repellendus sequi temporibus tenetur veniam veritatis. Ab consectetur dicta eum excepturi illo mollitia natus nihil, obcaecati ratione rem saepe sint sunt! Cumque cupiditate exercitationem reprehenderit soluta voluptate?</p>
+                <button class="button-border contact-button">Jetzt kontaktieren</button>
+            </section>
+            <section class="gallery container" id="gallery">
+                <h1>Galerie</h1>
+                <div class="gallery-box">
+                    <div class="gallery-panel">
+                        <div class="panel-overlay">View Image</div>
+                        <img class="gallery-img" src="./res/img-1.jpg" alt="">
+                    </div>
+                    <div class="gallery-panel">
+                        <div class="panel-overlay">View Image</div>
+                        <img class="gallery-img" src="./res/img-2.jpg" alt="">
+                    </div>
+                    <div class="gallery-panel">
+                        <div class="panel-overlay">View Image</div>
+                        <img class="gallery-img" src="./res/img-3.jpg" alt="">
+                    </div>
+                    <div class="gallery-panel">
+                        <div class="panel-overlay">View Image</div>
+                        <img class="gallery-img" src="./res/img-4.jpg" alt="">
+                    </div>
+                    <div class="gallery-panel">
+                        <div class="panel-overlay">View Image</div>
+                        <img class="gallery-img" src="./res/img-5.jpg" alt="">
+                    </div>
+                    <div class="gallery-panel">
+                        <div class="panel-overlay">View Image</div>
+                        <img class="gallery-img" src="./res/img-6.jpg" alt="">
+                    </div>
+                    <div class="gallery-panel">
+                        <div class="panel-overlay">View Image</div>
+                        <img class="gallery-img" src="./res/img-7.jpg" alt="">
+                    </div>
+                    <div class="gallery-panel">
+                        <div class="panel-overlay">View Image</div>
+                        <img class="gallery-img" src="./res/img-8.jpg" alt="">
+                    </div>
+                    <div class="gallery-panel">
+                        <div class="panel-overlay">View Image</div>
+                        <img class="gallery-img" src="./res/img-9.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+            <div class="dark-bg">
+                <section class="services container" id="services">
+                    <h1>Leistungen</h1>
+                    <div class="services-box">
+                        <div class="services-item">
+                            <div class="services-top">
+                                <div>
+                                    <div class="icon-box">
+                                        <i class="ri-chat-3-line"></i>
+                                    </div>
+                                    <h3>Beratung</h3>
+                                </div>
+                                <div class="icon-box service-arrow">
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </div>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dicta harum molestiae porro unde. Alias, magnam natus. Numquam, quo, sunt!</p>
+                        </div>
+                        <div class="services-item">
+                            <div class="services-top">
+                                <div>
+                                    <div class="icon-box">
+                                        <i class="ri-edit-line"></i>
+                                    </div>
+                                    <h3>Planung</h3>
+                                </div>
+                                <div class="icon-box service-arrow">
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </div>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dicta harum molestiae porro unde. Alias, magnam natus. Numquam, quo, sunt!</p>
+                        </div>
+                        <div class="services-item">
+                            <div class="services-top">
+                                <div>
+                                    <div class="icon-box">
+                                        <i class="ri-settings-3-line"></i>
+                                    </div>
+                                    <h3>Realisierung</h3>
+                                </div>
+                                <div class="icon-box service-arrow">
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </div>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dicta harum molestiae porro unde. Alias, magnam natus. Numquam, quo, sunt!</p>
+                        </div>
+                        <div class="services-item">
+                            <div class="services-top">
+                                <div>
+                                    <div class="icon-box">
+                                        <i class="ri-group-line"></i>
+                                    </div>
+                                    <h3>Service</h3>
+                                </div>
+                                <div class="icon-box service-arrow">
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </div>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dicta harum molestiae porro unde. Alias, magnam natus. Numquam, quo, sunt!</p>
+                        </div>
+                    </div>
+                </section>
+                <div class="contact container" id="contact">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9991.95723723953!2d6.801074353178264!3d51.23769177346677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8c97f28705927%3A0x1c2760ffab257ed0!2s40237%20D%C3%BCsseldorf!5e0!3m2!1sde!2sde!4v1662510372863!5m2!1sde!2sde" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="contact-content">
+                        <div class="logo">
+                            <img src="./res/logo.svg" alt="Moebelmacher">
+                        </div>
+                        <div class="contact-info">
+                            <div class="info-item">
+                                <div class="info-icon"></div>
+                                <span>Moebelmacher GmbH</span>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"></div>
+                                <span>Musterstraße 13, <br>40237 Düsseldorf</span>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"></div>
+                                <span>info@moebelmacher.net</span>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"></div>
+                                <span>0211 239 998</span>
+                            </div>
+                        </div>
+                        <div class="contact-buttons">
+                            <button class="button-border contact-button">Jetzt kontaktieren</button>
+                            <button class="button-border button-full btn-to-top">
+                                <i class="ri-arrow-up-s-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg">
+                    <div class="bg-mid"></div>
+                </div>
+            </div>
+        </main>
+</body>
+</html>
