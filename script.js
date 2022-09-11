@@ -23,20 +23,15 @@ window.addEventListener("load", () => {
 // Slider
 
 function startSlider() {
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.left = `${i * 100}%`;
-    }
-    setInterval(() => {
-        slideRight();
-        setControls();
-    }, 11000);
-}
-
-function slideRight() {
-    slideCounter++;
-    const sliderWidth = slider.offsetWidth;
-    sliderTrack.classList.add("transTranslate");
-    sliderTrack.style.transform = `translateX(${slideCounter * -sliderWidth}px)`;
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        autoplay: {
+            delay: 5000
+        }
+    });
 }
 
 function setControls() {
@@ -51,14 +46,6 @@ function setControls() {
     activeDot.classList.remove("active-dot");
     dots[slideCounter].classList.add("active-dot");
 }
-
-sliderTrack.addEventListener("transitionend", () => {
-    if(slideCounter > slides.length - 2) {
-        sliderTrack.classList.remove("transTranslate");
-        slideCounter = 0;
-        sliderTrack.style.transform = `translateX(0)`;
-    }
-})
 
 
 // Gallery
