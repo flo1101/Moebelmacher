@@ -1,13 +1,9 @@
 const body = document.querySelector("body");
-const slider = document.querySelector(".slider");
-const sliderTrack = document.querySelector(".slider-track");
-const slides = document.querySelectorAll(".single-slide");
-const dots = document.querySelectorAll(".slider-dot");
-const slideNumber = document.querySelector("#slide-num")
+const contactOverlay = document.querySelector(".contact-overlay");
+const contactOverlaySuccess = document.querySelector(".contact-overlay-success");
 const galleryOverlay = document.querySelector(".gallery-overlay");
 const galleryOverlayImg = document.querySelector("#gallery-overlay-img");
 const serviceItems = document.querySelectorAll(".services-item");
-let slideCounter = 0;
 
 
 window.addEventListener("load", () => {
@@ -17,6 +13,7 @@ window.addEventListener("load", () => {
     addGalleryFunctions();
     addServiceClickEvents();
     addBtns();
+    addContactFormSubmit();
 })
 
 
@@ -32,20 +29,17 @@ function startSlider() {
             delay: 5000
         }
     });
+    swiper.on("transitionStart", () => {
+        let index = swiper.activeIndex;
+        if (index > 4) {
+            index = 1;
+        } else if (index === 0) {
+            index = 4;
+        }
+        document.querySelector("#slide-num").textContent = `0${index}`;
+    })
 }
 
-function setControls() {
-    const activeDot = document.querySelector(".active-dot");
-    if (slideCounter > slides.length - 2) {
-        activeDot.classList.remove("active-dot");
-        dots[0].classList.add("active-dot");
-        slideNumber.textContent = `01`;
-        return;
-    }
-    slideNumber.textContent = `0${slideCounter + 1}`;
-    activeDot.classList.remove("active-dot");
-    dots[slideCounter].classList.add("active-dot");
-}
 
 
 // Gallery
@@ -165,10 +159,36 @@ function addContactBtns() {
     const btns = document.querySelectorAll(".contact-button");
     btns.forEach(btn => btn.addEventListener("click", () => {
         contactOverlay.style.display = "flex";
-        console.log("triggered")
     }))
     const contactOverlayClose = document.querySelector(".contact-overlay-close");
     contactOverlayClose.addEventListener("click", () => {
         contactOverlay.style.display = "none";
     })
+    addContactFormSubmit();
+}
+
+function addContactFormSubmit() {
+    const form = document.querySelector(".contact-form");
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+        if (validateContactForm()) {
+            contactOverlay.style.display = "none";
+            contactOverlaySuccess.style.display = "flex";
+        } else {
+            document.querySelector(".contact-form-error-msg").style.display = "block";
+        }
+    })
+    const close = document.querySelector(".contact-overlay-success-close");
+    close.addEventListener("click", () => {
+        contactOverlaySuccess.style.display = "none";
+    })
+}
+
+function validateContactForm() {
+    const nameInput = document.querySelector("#name-input");
+    const mailInput = document.querySelector("#mail-input");
+    const msgInput = document.querySelector("#msg-input");
+    let valid = false;
+    if (nameInput.value !== "" && mailInput.value !== "" && msgInput !== "") valid = true;
+    return valid;
 }

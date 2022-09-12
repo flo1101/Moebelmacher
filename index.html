@@ -13,22 +13,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <div class="contact-overlay container">
-            <div class="contact-overlay-top">
-                <h2>Kontaktformular</h2>
-                <div class="contact-overlay-close">
-                    <i class="ri-close-line"></i>
+        <div class="contact-overlay overlay-box container">
+            <div class="contact-overlay-form">
+                <div class="contact-overlay-top">
+                    <h2>Kontaktformular</h2>
+                    <div class="contact-overlay-close">
+                        <i class="ri-close-line"></i>
+                    </div>
                 </div>
+                <div class="underline"></div>
+                <p class="contact-form-error-msg">Bitte füllen Sie das Formular korrekt aus.</p>
+                <form class="contact-form">
+                    <div>
+                        <input id="name-input" class="input-item" type="text" placeholder="Name">
+                        <input id="mail-input" class="input-item" type="email" placeholder="Email">
+                    </div>
+                    <textarea id="msg-input" class="input-item" placeholder="Nachricht" rows="6"></textarea>
+                    <input class="btn-contact-submit button-border" type="submit" value="senden">
+                </form>
             </div>
-            <div class="underline"></div>
-            <form class="contact-form">
-                <div>
-                    <input class="input-item" type="text" placeholder="Name">
-                    <input class="input-item" type="email" placeholder="Email">
+        </div>
+        <div class="contact-overlay-success overlay-box container">
+            <div class="contact-overlay-form">
+                <div class="contact-overlay-top">
+                    <h2>Danke!</h2>
+                    <div class="contact-overlay-success-close">
+                        <i class="ri-close-line"></i>
+                    </div>
                 </div>
-                <textarea class="input-item" placeholder="Message" rows="6"></textarea>
-                <input class="btn-contact-submit button-border" type="submit" value="submit">
-            </form>
+                <div class="underline"></div>
+                <p>Ihre Nachricht wurde erfolgreich versendet. Wir kümmern uns schnellstmöglich um Ihr Anliegen.</p>
+            </div>
         </div>
         <div class="gallery-overlay">
             <div class="gallery-container container">

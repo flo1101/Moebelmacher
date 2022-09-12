@@ -70,6 +70,7 @@ h2  {
     z-index: 2;
     top: 0;
     left: 0;
+    pointer-events: none;
 }
 
 .swiper-pagination-bullet {
@@ -308,6 +309,10 @@ nav {
     font-weight: 700;
 }
 
+.slider-btns {
+    pointer-events: auto;
+}
+
 .slider-btns :first-child {
     background-color: transparent;
     color: var(--white);
@@ -498,10 +503,8 @@ nav {
     justify-content: center;
 }
 
-.contact-overlay {
+.overlay-box {
     display: none;
-    flex-direction: column;
-    align-items: flex-start;
     position: fixed;
     padding: 2rem 2.5rem;
     bottom: 4rem;
@@ -513,12 +516,19 @@ nav {
     box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.5);
 }
 
-.contact-overlay h2 {
+.contact-overlay-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-overlay-form h2 {
     word-break: break-word;
     text-align: left;
 }
 
-.contact-overlay > .underline {
+.contact-overlay-form > .underline {
     margin: 1rem 0;
 }
 
@@ -529,10 +539,14 @@ nav {
     align-items: center;
 }
 
-.contact-overlay-close {
+.contact-overlay-close, .contact-overlay-success-close {
     color: var(--dark-blue);
     font-size: 2rem;
     cursor: pointer;
+}
+
+.contact-form-error-msg {
+    display: none;
 }
 
 .contact-form {
