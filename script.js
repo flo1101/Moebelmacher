@@ -26,7 +26,8 @@ function startSlider() {
             el: '.swiper-pagination',
         },
         autoplay: {
-            delay: 5000
+            delay: 5000,
+            disableOnInteraction: false
         }
     });
     swiper.on("transitionStart", () => {
